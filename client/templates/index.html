@@ -3,9 +3,48 @@
     <h1 class="title">ObjectSearch</h1>
   {{/contentFor}}
 
+  {{#contentFor "headerButtonLeft"}}
+    <a class="button icon-left ion-navicon-round button-clear"></a>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+    <a class="button icon-right ion-plus-circled button-clear"></a>
+  {{/contentFor}}
+
   {{#ionView}}
     {{#ionContent}}
-      Welcome
+    <div class="bar bar-header item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search" placeholder="Keywords">
+      </label>
+      <button class="button button-outline button-balanced">
+        Search
+      </button>
+      </div>
+
+     {{#ionList class="my-class"}}
+      
+        {{#ionItem path="item.show"
+           buttonRight=true avatar=true class="my-class" id="my-id"}}
+          <h2>Netbook</h2>
+          <p>gfhgfjh</p>
+          <button class="button button-positive button-clear">
+            {{> ionIcon icon="ios-arrow-right" }}
+          </button>
+        {{/ionItem}}
+
+        {{#ionItem buttonRight=true avatar=true class="my-class" id="my-id"}}
+          <h2>Netbook2</h2>
+          <p>dfjkjh</p>
+          <button class="button button-positive button-clear">
+            {{> ionIcon icon="ios-arrow-right"}}
+          </button>
+        {{/ionItem}}
+        
+
+     {{/ionList}}
+
     {{/ionContent}}
   {{/ionView}}
 </template>
