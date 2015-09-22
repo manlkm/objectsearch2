@@ -24,15 +24,15 @@
       </div>
 
      {{#ionList class="my-class"}}
-      
-        {{#ionItem path="item.show"
-           buttonRight=true avatar=true class="my-class" id="my-id"}}
-          <h2>Netbook</h2>
-          <p>gfhgfjh</p>
-          <button class="button button-positive button-clear">
-            {{> ionIcon icon="ios-arrow-right" }}
-          </button>
-        {{/ionItem}}
+        {{#each objList}}
+          {{#ionItem path="item.show" _id=1 buttonRight=true avatar=true class="my-class" id="my-id"}}
+            <h2>{{name}}</h2>
+            <p>{{_id}}</p>
+            <button class="button button-positive button-clear">
+              {{> ionIcon icon="ios-arrow-right" }}
+            </button>
+          {{/ionItem}}
+        {{/each}}
 
         {{#ionItem buttonRight=true avatar=true class="my-class" id="my-id"}}
           <h2>Netbook2</h2>
