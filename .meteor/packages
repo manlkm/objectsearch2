@@ -12,3 +12,6 @@ fourseven:scss@2.0.0
 meteoric:ionic-sass
 meteoric:ionicons-sass
 meteoric:ionic
+aldeed:collection2
+aldeed:simple-schema
+meteoric:autoform-ionic
