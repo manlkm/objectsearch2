@@ -1,0 +1,42 @@
+<template name="objectShow">
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">ObjectSearch</h1>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear" data-ion-modal="objectEdit" data-id="{{object._id}}">Edit</button>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent class="padding object-detail"}}
+        {{#with object}}
+
+          <div class="list card">
+            <div class="record-title">
+              <h2>{{name}}</h2>
+            </div>
+
+            <div class="item item-body">
+              <p>
+                <strong>Location:</strong> {{location.name}}
+              </p>
+              
+              <p>
+                <strong>Created at:</strong> {{formatDate createTs}}
+              </p>
+
+              <p>
+                {{remark}}
+              </p>
+          </div>
+
+          </div>
+
+        {{/with}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>

@@ -43,3 +43,12 @@ $loading-font-size: 22px;
   margin-left: -67px;
   float: left;
 }
+
+.object-detail {
+  background: $stable;
+}
+
+.object-detail .record-title{
+  padding-left: 10px;
+  padding-top: 10px;
+}

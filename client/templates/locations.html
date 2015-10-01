@@ -1,14 +1,10 @@
-<template name="index">
+<template name="locations">
   {{#contentFor "headerTitle"}}
     <h1 class="title">ObjectSearch</h1>
   {{/contentFor}}
 
-  {{#contentFor "headerButtonLeft"}}
-    <a class="button icon-left ion-navicon-round button-clear"></a>
-  {{/contentFor}}
-
   {{#contentFor "headerButtonRight"}}
-    <button class="button button-clear" data-ion-modal="objectAdd">{{> ionIcon icon="ios-plus-empty"}}</button>
+    <button class="button button-clear" data-ion-modal="locationAdd">{{> ionIcon icon="ios-plus-empty"}}</button>
   {{/contentFor}}
 
   {{#ionView}}
@@ -24,10 +20,9 @@
       </div>
 
      {{#ionList class="my-class"}}
-        {{#each objList}}
+        {{#each locList}}
           {{#ionItem path="object.show" buttonRight=true avatar=true class="my-class" id="my-id"}}
             <h2>{{name}}</h2>
-            <p>{{location.name}}</p>
             <button class="button button-positive button-clear">
               {{> ionIcon icon="ios-arrow-right" }}
             </button>

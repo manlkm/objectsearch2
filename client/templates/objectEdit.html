@@ -1,10 +1,10 @@
-<template name="objectAdd">
+<template name="objectEdit">
   {{#ionModal customTemplate=true}}
-    {{#autoForm collection="Objects" id="object-new-form" type="insert"}}
+    {{#autoForm collection="Objects" doc=object id="object-edit-form" type="update"}}
       <div class="bar bar-header bar-stable">
         <button data-dismiss="modal" type="button" class="button button-clear">Cancel</button>
-        <h2 class="title">Edit Objects</h2>
-        <button type="submit" class="button button-positive button-clear">Add</button>
+        <h2 class="title">Edit Object</h2>
+        <button type="submit" class="button button-positive button-clear">Save</button>
       </div>
       <div class="content has-header overflow-scroll">
         {{> afQuickFields omitFields="createTs, locationId"}}

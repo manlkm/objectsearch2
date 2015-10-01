@@ -1,31 +1,21 @@
 <template name="layout">
   {{#ionBody}}
+    {{> ionNavBar class="bar-balanced"}}
 
-    {{#ionSideMenuContainer}}
-      {{#ionSideMenu}}
-        <div class="bar bar-header bar-dark">
-          <h1 class="title">Left Menu</h1>
-        </div>
-        <div class="content has-header">
-          <div class="list">
-            <div class="item item-icon-right" data-ion-menu-close>
-              Close Me {{> ionIcon icon="ios-arrow-right"}}
-            </div>
-          </div>
-        </div>
-      {{/ionSideMenu}}
+    {{#ionNavView}}
+      {{> yield}}
+    {{/ionNavView}}
 
-      {{#ionSideMenuContent}}
-
-        {{> ionNavBar class="bar-balanced"}}
-
-        {{#ionNavView}}
-          {{> yield}}
-        {{/ionNavView}}
-
-      {{/ionSideMenuContent}}
-
-    {{/ionSideMenuContainer}}
-
+    {{#if isAndroid}}
+      {{#ionTabs style="android"}}
+        {{> ionTab title="Objects" path="index" icon="android-star"}}
+        {{> ionTab title="Locations" path="locations" icon="android-time"}}
+      {{/ionTabs}}
+    {{else}}
+      {{#ionTabs style="ios"}}
+        {{> ionTab title="Objects" path="index" iconOff="ios-bolt-outline" iconOn="ios-bolt" class="tab-item-positive"}}
+        {{> ionTab title="Locations" path="locations" iconOff="ios-clock-outline" iconOn="ios-clock" class="tab-item-positive"}}
+      {{/ionTabs}}
+    {{/if}}
   {{/ionBody}}
 </template>

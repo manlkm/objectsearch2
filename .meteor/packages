@@ -15,3 +15,7 @@ meteoric:ionic
 aldeed:collection2
 aldeed:simple-schema
 meteoric:autoform-ionic
+matb33:collection-hooks
+aldeed:autoform
+dburles:collection-helpers
+momentjs:moment
